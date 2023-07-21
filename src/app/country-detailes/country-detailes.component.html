@@ -1,0 +1,28 @@
+<div class="container" *ngIf="toggleDetails()">
+  <div class="row country-detailes">
+    <div class="col-12">
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Capital</th>
+              <th scope="col">Population</th>
+              <th scope="col">Currencies</th>
+              <th scope="col">Flag</th>
+            </tr>
+          </thead>
+          <tbody class="customtable">
+            <tr>
+              <td>{{ countryDetails.name }}</td>
+              <td>{{ countryDetails.capital }}</td>
+              <td>{{ countryDetails.population }}</td>
+              <td>{{ countryDetails.currencies[0].name }}</td>
+              <td><img [src]="countryDetails.flags.png" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
